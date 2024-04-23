@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+
+}
+:root{
+    --black:#000;
+    --clock-bg:#4c4c4c;
+    --white:#fff;
+}
+body{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background:var(--white);
+}
+.container{
+    position: relative;
+}
+.clock{
+    color:var(--white) ;
+    height: 500px;
+    width: 500px;
+    background: var(--black);
+    border-radius: 50%;
+    border: 2px solid #ffffff81;
+    box-shadow: 0 0 20px #bababa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clock span{
+    position: absolute;
+    transform: rotate( calc(30deg * var(--i)));
+    inset: 10px;
+    text-align: center;
+}
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 25px;
+}
+.clock::before{
+    content: "";
+    background: #fff;
+    position: absolute;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    z-index: 2;
+}
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    height: var(--hei);
+    width: 4px;
+    background-color: var(--clr);
+    border-radius: 8px;
+}
